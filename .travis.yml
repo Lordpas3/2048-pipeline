@@ -24,6 +24,7 @@ script:
 
 deploy:
   provider: releases
+  api_key: $SECRET_KEY
   file: 2048-androidgit/build/outputs/apk/release/2048-android-release-unsigned.apk
   skip_cleanup: true
   on:
