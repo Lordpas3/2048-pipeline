@@ -21,3 +21,14 @@ android:
 
 script:
   - ./gradlew build
+
+deploy:
+  provider: releases
+  file: 2048-android-release-unsigned.apk
+  skip_cleanup: true
+  on:
+    repo: Lordpas3/2048-pipeline
+    tags: true
+    jdk: oraclejdk8
+#  api_key:
+#    secure: here goes the encrypted api key
