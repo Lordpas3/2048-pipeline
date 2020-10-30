@@ -29,6 +29,7 @@ deploy:
   on:
     repo: Lordpas3/2048-pipeline
     tags: true
+    condition: $TRAVIS_TAG =~ release$
     jdk: oraclejdk8
 #  api_key:
 #    secure: here goes the encrypted api key
