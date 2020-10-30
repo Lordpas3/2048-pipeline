@@ -22,10 +22,18 @@ android:
 script:
   - ./gradlew build
 
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "Lordpas3"
+  - git config --local user.email "Lordpas3@gmail.com"
+  - export GIT_TAG=$TRAVIS_BRANCH-v0.1.$TRAVIS_BUILD_NUMBER
+  - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+
+
 deploy:
   provider: releases
   api_key: $SECRET_KEY
-  file: "build/outputs/apk/release/2048-android-release-unsigned.apk"
+  file: "/home/travis/build/outputs/apk/release/2048-android-release-unsigned.apk"
   file_glob: "true"
   skip_cleanup: true
   on:
