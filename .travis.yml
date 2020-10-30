@@ -27,7 +27,7 @@ deploy:
   file: /build/outputs/apk/release/2048-android-release-unsigned.apk
   skip_cleanup: true
   on:
-    repo: Lordpas3/2048-pipeline
+    repo: Lordpas3/2048-pipeline-cin
     tags: false
     jdk: oraclejdk8
 #  api_key:
