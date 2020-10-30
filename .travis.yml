@@ -25,12 +25,11 @@ script:
 deploy:
   provider: releases
   api_key: $SECRET_KEY
-  file: 2048-androidgit/build/outputs/apk/release/2048-android-release-unsigned.apk
+  file: 2048-android/build/outputs/apk/release/2048-android-release-unsigned.apk
   skip_cleanup: true
   on:
     branch: Releases
     repo: Lordpas3/2048-pipeline-cin
     tags: false
     jdk: oraclejdk8
-#  api_key:
-#    secure: here goes the encrypted api key
+
