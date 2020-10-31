@@ -33,12 +33,17 @@ before_deploy:
 deploy:
   provider: releases
   api_key: $SECRET_KEY
-  #  file: "/home/travis/build/outputs/apk/release/2048-android-release-unsigned.apk"
-  file: $TRAVIS_BUILD_DIR/build/outputs/apk/release/2048-android-release-unsigned.apk
+  name: dev-build-$TRAVIS_TAG
+  body: Automatic build of $TRAVIS_BRANCH ($TRAVIS_COMMIT) built by Travis CI on $(date +'%F %T %Z').
+  file:
+    - "2048-android-release-unsigned.apk"
+    - "changelog.txt"
   file_glob: "true"
   skip_cleanup: true
+  overwrite: true
+
   on:
-    branch: Releases
+    branch: feature-release-apk
     repo: Lordpas3/2048-pipeline-cin
     tags: false
     jdk: oraclejdk8
