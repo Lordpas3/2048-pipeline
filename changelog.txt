@@ -1,3 +1,7 @@
+v0.76
+first release to public
+
+
 v0.11
 fix duplicate file entry in .travis.yml
 

@@ -43,7 +43,7 @@ deploy:
   overwrite: true
 
   on:
-    branch: feature-release-apk
+    branch: main
     repo: Lordpas3/2048-pipeline-cin
     tags: false
     jdk: oraclejdk8
