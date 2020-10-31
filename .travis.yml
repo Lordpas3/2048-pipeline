@@ -37,11 +37,12 @@ deploy:
   body: Automatic build of $TRAVIS_BRANCH ($TRAVIS_COMMIT) built by Travis CI on $(date +'%F %T %Z').
   file:
     - "2048-android-release-unsigned.apk"
+    - build/outputs/apk/release/2048-android-release-unsigned.apk
     - "changelog.txt"
   file_glob: "true"
-  file:
-
   skip_cleanup: true
+  overwrite: true
+
   on:
     branch: feature-release-apk
     repo: Lordpas3/2048-pipeline-cin
