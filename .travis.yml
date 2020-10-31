@@ -35,8 +35,12 @@ deploy:
   api_key: $SECRET_KEY
   name: dev-build-$TRAVIS_TAG
   body: Automatic build of $TRAVIS_BRANCH ($TRAVIS_COMMIT) built by Travis CI on $(date +'%F %T %Z').
-  file: $TRAVIS_BUILD_DIR/build/outputs/apk/release/2048-android-release-unsigned.apk
+  file:
+    - "2048-android-release-unsigned.apk"
+    - "changelog.txt"
   file_glob: "true"
+  file:
+
   skip_cleanup: true
   on:
     branch: feature-release-apk

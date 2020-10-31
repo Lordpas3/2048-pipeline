@@ -1,0 +1,2 @@
+add changelog to release
+add apk file to release
