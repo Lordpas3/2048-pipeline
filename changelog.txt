@@ -1,0 +1,7 @@
+v0.11
+fix duplicate file entry in .travis.yml
+
+
+v0.1
+add changelog to release
+add apk file to release
