@@ -33,7 +33,8 @@ before_deploy:
 deploy:
   provider: releases
   api_key: $SECRET_KEY
-  file: "/home/travis/build/outputs/apk/release/2048-android-release-unsigned.apk"
+#  file: "/home/travis/build/outputs/apk/release/2048-android-release-unsigned.apk"
+  file: $TRAVIS_BUILD_DIR/2048-android/build/outputs/apk/release/2048-android-release-unsigned.apk
   file_glob: "true"
   skip_cleanup: true
   on:
