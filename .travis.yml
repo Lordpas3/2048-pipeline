@@ -21,6 +21,7 @@ android:
 
 script:
   - ./gradlew build
+  - ./gradlew testReleaseUnitTest
 
 before_deploy:
   # Set up git user name and tag this commit
@@ -43,7 +44,7 @@ deploy:
   overwrite: true
 
   on:
-    branch: feature-release-apk
+    branch: feature-tests
     repo: Lordpas3/2048-pipeline-cin
     tags: false
     jdk: oraclejdk8
